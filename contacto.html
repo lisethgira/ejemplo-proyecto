@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Carros - Contacto</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      alert(`Gracias, ${nombre}. Hemos recibido tu mensaje: "${mensaje}". Te responderemos a ${email}.`);
+      document.getElementById('form-contacto').reset();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Venta de Carros</h1>
+    <nav>
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Logo Venta de Carros" class="logo" />
+          </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Contáctanos</h2>
+    <p>Estamos aquí para ayudarte. Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+    <form id="form-contacto" onsubmit="enviarFormulario(event)">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br>
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <section class="info-contacto">
+      <h3>Nuestra oficina</h3>
+      <p>Dirección: Calle Ficticia 123, Ciudad Motor</p>
+      <p>Teléfono: +57 123 456 7890</p>
+      <p>Correo: contacto@ventadecarros.com</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Venta de Carros. Todos los derechos reservados.</p>
+  </footer>
+</body>
+<video autoplay muted loop id="video-fondo">
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4" type="video/mp4" />
+    Tu navegador no soporta video.
+  </video>
+</html>

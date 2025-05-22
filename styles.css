@@ -1,0 +1,354 @@
+/* Video de fondo */
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Posicionar el contenido sobre el video */
+body, main, header, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: #333;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex: 1 0 auto;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero button {
+  background-color: #28a745;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #555;
+}
+
+/* SECCIONES */
+.beneficios, .testimonios, .multimedia, .contacto-rapido {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* BENEFICIOS */
+.beneficios ul {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+/* TESTIMONIOS */
+.testimonios .testimonial {
+  border-left: 5px solid #28a745;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.testimonios .testimonial span {
+  display: block;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #333;
+  font-style: normal;
+}
+
+.avatar {
+  border-radius: 50px;
+}
+
+/* GALERÍA */
+.gallery-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.gallery-images img {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* VIDEO */
+.multimedia video {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 100%;
+  height: auto;
+}
+
+/* BOTONES DE CONTACTO */
+.botones-contacto {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contacto {
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #218838;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
+/* INVENTARIO */
+.inventario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carro {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.carro img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+
+ form {
+    background-color: #fff;
+    padding: 30px; /* Más espacio interno */
+    max-width: 600px;
+    margin: 20px auto; /* Margen arriba y abajo para separarlo */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Para que el padding no afecte el tamaño total */
+  }
+  
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;  /* Más padding para comodidad */
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  max-width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .botones-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inventario {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #video-fondo {
+    opacity: 0.2;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+}
